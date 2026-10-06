@@ -26,9 +26,8 @@ The add-on is removed when the browser closes.
 ### Permanent
 
 1. Build the `.xpi` (see below) or use the one in `dist/`.
-2. Open `about:config` and set `xpinstall.signatures.required` to `false` (Waterfox allows unsigned add-ons).
-3. Open `about:addons`, click the gear icon, and choose **Install Add-on From File**.
-4. Select the `.xpi`.
+2. Open `about:addons`, click the gear icon, and choose **Install Add-on From File**.
+3. Select the `.xpi`.
 
 ## Usage
 
