@@ -3,7 +3,7 @@ dist/
 *.xpi
 
 # Docs
-*.md
+DEPLOY.md
 !README.md
 
 # Python
