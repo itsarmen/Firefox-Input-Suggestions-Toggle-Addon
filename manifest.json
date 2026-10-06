@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "Input Suggestions Toggle",
+  "version": "1.0.0",
+  "description": "Toggle browser input value suggestions (form autofill history) on or off for every website with one click.",
+  "author": "Amiran Kimadze (itsarmen) <amoswaper@gmail.com>",
+  "homepage_url": "https://xrow.asia",
+  "developer": {
+    "name": "Amiran Kimadze (itsarmen)",
+    "url": "https://xrow.asia"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "input-suggestions-toggle@xrow.asia",
+      "strict_min_version": "115.0",
+      "homepage_url": "https://xrow.asia"
+    }
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "Input Suggestions Toggle",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ]
+}
