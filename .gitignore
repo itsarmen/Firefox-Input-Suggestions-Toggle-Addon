@@ -4,6 +4,7 @@ dist/
 
 # Docs
 *.md
+!README.md
 
 # Python
 __pycache__/

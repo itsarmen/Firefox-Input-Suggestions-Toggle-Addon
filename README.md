@@ -1,0 +1,65 @@
+# Input Suggestions Toggle
+
+A lightweight Firefox / Waterfox WebExtension that turns the browser's **input value suggestions** (the form autofill history dropdown) **on or off** for every websites with a single click.
+
+## Features
+
+- One-click toggle from the toolbar popup.
+- Applies to all sites, frames, and shadow DOM.
+- Restores each field's original `autocomplete` value when re-enabled.
+- Setting is saved and synced live to all open tabs.
+
+## How it works
+
+Firefox and Waterfox do not expose the `browser.formfill.enable` preference to regular extensions, so this add-on uses the standard approach: a content script forces `autocomplete="off"` on form fields, which suppresses the value-suggestion dropdown. Password-manager (login) filling is separate and unaffected.
+
+## Install
+
+### Temporary (for testing)
+
+1. Open `about:debugging#/runtime/this-firefox`.
+2. Click **Load Temporary Add-on**.
+3. Select `manifest.json`.
+
+The add-on is removed when the browser closes.
+
+### Permanent
+
+1. Build the `.xpi` (see below) or use the one in `dist/`.
+2. Open `about:config` and set `xpinstall.signatures.required` to `false` (Waterfox allows unsigned add-ons).
+3. Open `about:addons`, click the gear icon, and choose **Install Add-on From File**.
+4. Select the `.xpi`.
+
+## Usage
+
+1. Click the toolbar icon.
+2. Flip the switch:
+   - **On** — native input value suggestions are enabled (default).
+   - **Off** — suggestions are disabled on all sites.
+
+## Build
+
+Requires Python 3.
+
+```bash
+python build.py            # -> dist/input-suggestions-toggle-1.0.0.xpi
+python build.py out/custom.xpi
+```
+
+## Project structure
+
+```
+manifest.json      Extension manifest (MV3)
+content.js         Toggles autocomplete="off" on inputs/textareas
+popup.html/js/css  Toolbar toggle UI
+icons/             Extension icons (16/32/48/128)
+build.py           Packages the add-on into an .xpi
+```
+
+## Author
+
+**Amiran Kimadze (itsarmen)**
+
+- Website: <https://xrow.asia>
+- Email: <amoswaper@gmail.com>
+- GitHub: <https://github.com/itsarmen>
