@@ -25,7 +25,7 @@ The add-on is removed when the browser closes.
 
 ### Permanent (Waterfox)
 
-1. Build the `.xpi` (see below) or use the one in `dist/`.
+1. Download the `.xpi` from the [Releases](https://github.com/itsarmen/Firefox-Input-Suggestions-Toggle-Addon/releases) page.
 2. Go to Add-ons: open `about:preferences`.
 3. Click the **cog/gear** icon.
 4. The cog icon displays a dropdown.
