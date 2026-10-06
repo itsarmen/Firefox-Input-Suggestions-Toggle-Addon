@@ -26,7 +26,10 @@ First public release — turn the browser's input value suggestions (form autofi
 ## Install
 
 1. Download `input-suggestions-toggle-1.0.0.xpi` below.
-2. Open `about:addons` → gear icon → **Install Add-on From File** → select the `.xpi`.
+2. Go to Add-ons: open `about:preferences`.
+3. Click the cog/gear icon.
+4. In the dropdown, click **Install Add-on From File**.
+5. Select the `.xpi`.
 
 ## Compatibility
 

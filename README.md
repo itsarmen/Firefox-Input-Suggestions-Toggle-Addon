@@ -23,11 +23,14 @@ Firefox and Waterfox do not expose the `browser.formfill.enable` preference to r
 
 The add-on is removed when the browser closes.
 
-### Permanent
+### Permanent (Waterfox)
 
 1. Build the `.xpi` (see below) or use the one in `dist/`.
-2. Open `about:addons`, click the gear icon, and choose **Install Add-on From File**.
-3. Select the `.xpi`.
+2. Go to Add-ons: open `about:preferences`.
+3. Click the **cog/gear** icon.
+4. The cog icon displays a dropdown.
+5. In the dropdown, click **Install Add-on From File**.
+6. Select the `.xpi`.
 
 ## Usage
 
