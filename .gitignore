@@ -2,6 +2,9 @@
 dist/
 *.xpi
 
+# Docs
+*.md
+
 # Python
 __pycache__/
 *.py[cod]
