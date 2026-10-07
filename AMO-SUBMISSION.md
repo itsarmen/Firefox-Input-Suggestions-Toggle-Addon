@@ -106,7 +106,7 @@ Permissions explained:
 - <all_urls> / content script on all sites: needed to apply autocomplete="off" to input fields on every website.
 
 Build instructions:
-The .xpi is a plain ZIP with manifest.json at its root. It can be reproduced from source with: python build.py  (Requires Python 3; produces dist/input-suggestions-toggle-1.0.0.xpi).
+The .xpi is a plain ZIP with manifest.json at its root. It can be reproduced from source with: python build.py  (Requires Python 3; produces dist/input-suggestions-toggle-1.0.1.xpi).
 ```
 
 ---
@@ -114,8 +114,11 @@ The .xpi is a plain ZIP with manifest.json at its root. It can be reproduced fro
 ## Version Notes (next step)
 
 ```
-v1.0.0 — Initial release.
+v1.0.1
+- Updated add-on icons (now custom artwork) and added a 64px icon variant.
+- No functional changes.
 
+v1.0.0 — Initial release.
 - One-click on/off toggle for native input value suggestions (form autofill history).
 - Applies to all sites, frames, and shadow DOM; restores original autocomplete values on re-enable.
 - Preference persists and syncs across open tabs.

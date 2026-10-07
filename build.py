@@ -2,7 +2,7 @@
 """Build the Input Suggestions Toggle WebExtension into an installable .xpi.
 
 Usage:
-    python build.py                # -> dist/input-suggestions-toggle-1.0.0.xpi
+    python build.py                # -> dist/input-suggestions-toggle-1.0.1.xpi
     python build.py custom/path.xpi
 
 The .xpi is simply a ZIP archive with manifest.json at its root.

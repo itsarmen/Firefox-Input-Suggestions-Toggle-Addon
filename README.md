@@ -44,7 +44,7 @@ The add-on is removed when the browser closes.
 Requires Python 3.
 
 ```bash
-python build.py            # -> dist/input-suggestions-toggle-1.0.0.xpi
+python build.py            # -> dist/input-suggestions-toggle-1.0.1.xpi
 python build.py out/custom.xpi
 ```
 

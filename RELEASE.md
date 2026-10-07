@@ -2,11 +2,11 @@
 
 ## Choose a tag
 
-Create new tag: `v1.0.0` on publish (target branch: `main`)
+Create new tag: `v1.0.1` on publish (target branch: `main`)
 
 ## Release title
 
-Firefox Input Suggestions Toggle v1.0.0
+Firefox Input Suggestions Toggle v1.0.1
 
 ## Release description
 
@@ -14,7 +14,7 @@ Firefox Input Suggestions Toggle v1.0.0
 
 ## Highlights
 
-First public release — turn the browser's input value suggestions (form autofill history) on or off for every website with a single click.
+Turn the browser's input value suggestions (form autofill history) on or off for every website with a single click. This release refreshes the add-on icons with custom artwork.
 
 ## Features
 
@@ -25,7 +25,7 @@ First public release — turn the browser's input value suggestions (form autofi
 
 ## Install
 
-1. Download `input-suggestions-toggle-1.0.0.xpi` below.
+1. Download `input-suggestions-toggle-1.0.1.xpi` below.
 2. Go to Add-ons: open `about:preferences`.
 3. Click the cog/gear icon.
 4. In the dropdown, click **Install Add-on From File**.
@@ -33,7 +33,7 @@ First public release — turn the browser's input value suggestions (form autofi
 
 ## Compatibility
 
-- Firefox 115+ / Waterfox
+- Firefox 142+ / Waterfox
 
 ## Notes
 
@@ -42,6 +42,7 @@ First public release — turn the browser's input value suggestions (form autofi
 
 ## Changelog
 
+- **v1.0.1** — Updated add-on icons (custom artwork) and added a 64px icon variant.
 - **v1.0.0** — Initial release.
 
 <!-- End of release description -->
@@ -56,4 +57,4 @@ Leave unchecked (this is production ready)
 
 ## Attach binaries
 
-`dist/input-suggestions-toggle-1.0.0.xpi`
+`dist/input-suggestions-toggle-1.0.1.xpi`
