@@ -4,6 +4,8 @@ dist/
 
 # Docs
 DEPLOY.md
+AMO-SUBMISSION.md
+AMO-VERSION-*.md
 !README.md
 
 # Python
