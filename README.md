@@ -1,6 +1,14 @@
-# Input Suggestions Toggle
+<p align="center">
+  <img src="assets/banner-1600x600.png" alt="Input Suggestions Toggle — turn form autofill history suggestions on or off with one click, on every site." width="100%">
+</p>
 
-A lightweight Firefox / Waterfox WebExtension that turns the browser's **input value suggestions** (the form autofill history dropdown) **on or off** for every websites with a single click.
+<h1 align="center">Input Suggestions Toggle</h1>
+
+<p align="center">
+  A lightweight Firefox / Waterfox WebExtension that turns the browser's
+  <strong>input value suggestions</strong> (the form autofill history dropdown)
+  <strong>on or off</strong> for every website with a single click.
+</p>
 
 ## Features
 
@@ -54,7 +62,8 @@ python build.py out/custom.xpi
 manifest.json      Extension manifest (MV3)
 content.js         Toggles autocomplete="off" on inputs/textareas
 popup.html/js/css  Toolbar toggle UI
-icons/             Extension icons (16/32/48/128)
+icons/             Extension icons (16/32/48/64/128)
+assets/            README banner (not packaged)
 build.py           Packages the add-on into an .xpi
 ```
 

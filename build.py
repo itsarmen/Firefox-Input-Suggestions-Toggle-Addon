@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parent
 MANIFEST = ROOT / "manifest.json"
 DIST_DIR = ROOT / "dist"
 
-EXCLUDE_DIRS = {"dist", ".git", "__pycache__", ".vscode", ".idea", "node_modules"}
+EXCLUDE_DIRS = {"dist", "assets", ".git", "__pycache__", ".vscode", ".idea", "node_modules"}
 EXCLUDE_SUFFIXES = {".py", ".xpi", ".md", ".log", ".pyc"}
 EXCLUDE_NAMES = {".DS_Store", "Thumbs.db"}
 
