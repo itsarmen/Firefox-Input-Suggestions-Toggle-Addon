@@ -7,7 +7,11 @@
 <p align="center">
   A lightweight Firefox / Waterfox WebExtension that turns the browser's
   <strong>input value suggestions</strong> (the form autofill history dropdown)
-  <strong>on or off</strong> for every website with a single click.
+   <strong>on or off</strong> for every website with a single click.
+</p>
+
+<p align="center">
+  <a href="https://addons.mozilla.org/en-US/firefox/addon/input-suggestions-toggle/"><img src="https://img.shields.io/badge/Firefox%20Add-ons-Install-FF7139?logo=firefoxbrowser&logoColor=white" alt="Install from Firefox Add-ons"></a>
 </p>
 
 ## Features
@@ -22,6 +26,10 @@
 Firefox and Waterfox do not expose the `browser.formfill.enable` preference to regular extensions, so this add-on uses the standard approach: a content script forces `autocomplete="off"` on form fields, which suppresses the value-suggestion dropdown. Password-manager (login) filling is separate and unaffected.
 
 ## Install
+
+### From Firefox Add-ons (recommended)
+
+Install directly from the official listing: <https://addons.mozilla.org/en-US/firefox/addon/input-suggestions-toggle/>
 
 ### Temporary (for testing)
 

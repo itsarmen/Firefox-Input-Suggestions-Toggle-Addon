@@ -61,6 +61,15 @@ body {
   color: var(--muted);
 }
 
+.rate a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.rate a:hover {
+  text-decoration: underline;
+}
+
 .author {
   margin-top: 10px;
   padding-top: 8px;
