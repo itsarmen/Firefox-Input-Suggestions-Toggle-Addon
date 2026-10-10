@@ -2,8 +2,8 @@
 """Build the Input Suggestions Toggle WebExtension into an installable .xpi.
 
 Usage:
-    python build.py                # -> dist/input-suggestions-toggle-1.0.1.xpi
-    python build.py custom/path.xpi
+    python tools/build.py                # -> dist/input-suggestions-toggle-1.0.1.xpi
+    python tools/build.py custom/path.xpi
 
 The .xpi is simply a ZIP archive with manifest.json at its root.
 """
@@ -15,18 +15,19 @@ import sys
 import zipfile
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
-MANIFEST = ROOT / "manifest.json"
+ROOT = Path(__file__).resolve().parent.parent
+SRC = ROOT / "extension"
+MANIFEST = SRC / "manifest.json"
 DIST_DIR = ROOT / "dist"
 
-EXCLUDE_DIRS = {"dist", "assets", ".git", "__pycache__", ".vscode", ".idea", "node_modules"}
+EXCLUDE_DIRS = {".git", "__pycache__", ".vscode", ".idea", "node_modules"}
 EXCLUDE_SUFFIXES = {".py", ".xpi", ".md", ".log", ".pyc"}
 EXCLUDE_NAMES = {".DS_Store", "Thumbs.db"}
 
 
 def load_manifest() -> dict:
     if not MANIFEST.is_file():
-        sys.exit(f"error: manifest.json not found in {ROOT}")
+        sys.exit(f"error: manifest.json not found in {SRC}")
     try:
         data = json.loads(MANIFEST.read_text(encoding="utf-8"))
     except json.JSONDecodeError as exc:
@@ -39,10 +40,10 @@ def load_manifest() -> dict:
 
 def iter_files() -> list[Path]:
     files: list[Path] = []
-    for path in sorted(ROOT.rglob("*")):
+    for path in sorted(SRC.rglob("*")):
         if not path.is_file():
             continue
-        rel = path.relative_to(ROOT)
+        rel = path.relative_to(SRC)
         if any(part in EXCLUDE_DIRS for part in rel.parts):
             continue
         if path.suffix.lower() in EXCLUDE_SUFFIXES:
@@ -70,13 +71,13 @@ def build(output: Path | None = None) -> Path:
 
     with zipfile.ZipFile(output, "w", zipfile.ZIP_DEFLATED) as zf:
         for path in files:
-            zf.write(path, path.relative_to(ROOT).as_posix())
+            zf.write(path, path.relative_to(SRC).as_posix())
 
     print(f"Built {manifest['name']} v{manifest['version']}")
     print(f"  -> {output}")
     print(f"  {len(files)} files:")
     for path in files:
-        print(f"     {path.relative_to(ROOT).as_posix()}")
+        print(f"     {path.relative_to(SRC).as_posix()}")
     return output
 
 

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner-1600x600.png" alt="Input Suggestions Toggle — turn form autofill history suggestions on or off with one click, on every site." width="100%">
+  <img src="docs/assets/banner-1600x600.png" alt="Input Suggestions Toggle — turn form autofill history suggestions on or off with one click, on every site." width="100%">
 </p>
 
 <h1 align="center">Input Suggestions Toggle</h1>
@@ -35,7 +35,7 @@ Install directly from the official listing: <https://addons.mozilla.org/en-US/fi
 
 1. Open `about:debugging#/runtime/this-firefox`.
 2. Click **Load Temporary Add-on**.
-3. Select `manifest.json`.
+3. Select `extension/manifest.json`.
 
 The add-on is removed when the browser closes.
 
@@ -60,19 +60,20 @@ The add-on is removed when the browser closes.
 Requires Python 3.
 
 ```bash
-python build.py            # -> dist/input-suggestions-toggle-1.0.1.xpi
-python build.py out/custom.xpi
+python tools/build.py            # -> dist/input-suggestions-toggle-1.0.1.xpi
+python tools/build.py out/custom.xpi
 ```
 
 ## Project structure
 
 ```
-manifest.json      Extension manifest (MV3)
-content.js         Toggles autocomplete="off" on inputs/textareas
-popup.html/js/css  Toolbar toggle UI
-icons/             Extension icons (16/32/48/64/128)
-assets/            README banner (not packaged)
-build.py           Packages the add-on into an .xpi
+extension/            Packaged add-on source
+  manifest.json       Extension manifest (MV3)
+  content.js          Toggles autocomplete="off" on inputs/textareas
+  popup.html/js/css   Toolbar toggle UI
+  icons/              Extension icons (16/32/48/64/128)
+tools/build.py        Packages the add-on into an .xpi
+docs/                 README banner and release notes (not packaged)
 ```
 
 ## Author
