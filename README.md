@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://addons.mozilla.org/en-US/firefox/addon/input-suggestions-toggle/"><img src="https://img.shields.io/badge/Firefox%20Add-ons-Install-FF7139?logo=firefoxbrowser&logoColor=white" alt="Install from Firefox Add-ons"></a>
+  <a href="https://addons.mozilla.org/en-US/firefox/addon/input-suggestions-toggle/"><img src="https://img.shields.io/badge/Firefox%20Add--ons-Install-FF7139?logo=firefoxbrowser&logoColor=white" alt="Install from Firefox Add-ons"></a>
 </p>
 
 ## Features
